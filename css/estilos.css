@@ -1,0 +1,146 @@
+html {
+ /* background: url(../Images/fondo1.jpg) no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  /*margin-top:-20px;  
+  font-size: 15px;
+  font-family: "Open Sans",serif;
+  background: transparent;*/
+
+      font-family: 'Open Sans';
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: #fff;
+    color: #606060;
+    overflow-x: hidden;
+
+}
+
+.scotiabank-red{
+  color: #d81e05;
+}
+
+header .link-phone span {
+    font-size: 1.8rem;
+    padding-top: 3px;
+}
+
+header .label-phone {
+    color: #606060;
+}
+
+
+header .divider {
+    border-bottom: 1px solid #e2e2e2;
+    margin: 5px 0px 5px 0px;
+}
+
+header .wrap-titulo {
+    clear: both;
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 1px 1.6rem 0;
+}
+
+header h1 {
+    text-align: left !important;
+    color: #606060 !important;;
+    font-size: 2.2rem;
+}
+
+
+.sitioSeguro {
+    color: #9a9a9a;
+    font-size: 1.2rem;
+    /*display: none;*/
+}
+
+
+.pull-right {
+    float: right;
+}
+
+
+.pull-right {
+    float: right!important;
+}
+
+
+
+
+
+.sitioSeguro i {
+    color: #9a9a9a;
+    font-size: 2rem;
+}
+
+generic-style.css:292
+.scotiabank-red {
+    color
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+generic-style.css:272
+
+div.content {
+    margin: 15rem auto 0;
+    max-width: 980px;
+
+
+
+
+    margin-top: 85px;
+    width: 100%;
+
+
+
+
+
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    top: 20px;
+    -webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+
+/*Footer*/
+
+.content > .row {
+    width: 97%;
+    margin: 0 auto;
+}
+.bg-gray {
+    border-top: 1px #ddd solid;
+}
+
+
+
+footer {
+    color: #757575;
+}
+
+
+
+.wrap-card {
+    float: right;
+}
+
+
+
+
+
+

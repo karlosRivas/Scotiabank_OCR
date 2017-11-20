@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html ng-app="telefonicaMexico">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#d81e05">
+    <title>Solicitud Tarjeta de Crédito Viva | Scotiabank</title>
+    <meta name="Description" content="Solicita aquí tu tarjeta de crédito Viva, para que empieces a viajar, llena la solicitud y te damos una respuesta inmediatamente - Scotiabank">
+    <meta name="keywords" content="solicitar tarjeta de credito, como obtener una tarjeta de crédito, tramitar tarjeta de credito">
+    <meta property="og:title" content="Solicitud Tarjeta de Crédito Viva | Scotiabank">
+    <meta property="og:description" content="Solicita aquí tu tarjeta de crédito Viva, para que empieces a viajar, llena la solicitud y te damos una respuesta inmediatamente - Scotiabank.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <link rel="canonical" href="https://solicita-tu-tdc.scotiabank.com.mx/solicitudOnLine/TarjetaCredito/UnicPage/Captura/Viva" />
+    <div itemscope itemtype="http://schema.org/CreditCard">
+        <span itemprop="name">Tarjeta de Crédito Viva de Scotiabank</span>
+        <span itemprop="amount" itemscope itemtype="http://schema.org/MonetaryAmount">Ingresos mínimos de $7500</span>
+        <span itemprop="currency" content="MXN">$</span>
+    </div>
+    <link rel="icon" type="image/png" href="/solicitudOnLine/Content/TarjetaCredito/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/solicitudOnLine/Content/TarjetaCredito/images/scotiabank-icono.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/solicitudOnLine/Content/TarjetaCredito/images/scotiabank-icono-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/solicitudOnLine/Content/TarjetaCredito/images/scotiabank-icono-114x114.png">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Google Tag Manager -->
+    <!--     <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PVK7LR');
+    </script> -->
+    <!-- End Google Tag Manager -->
+    <!-- Bootstrap v.3.3.6-->
+    <link rel="stylesheet" href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/css/bootstrap.min.css" />
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/css/material-icons.css">
+    <!-- Bootstrap Material Design -->
+    <link href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/css/bootstrap-material-design.css" rel="stylesheet">
+    <link href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/css/ripples.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/css/Digital_Factory_MX_Scotiabank_Canvas.css">
+    <link rel="stylesheet" href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/css/open-sans.css">
+    <link rel="stylesheet" href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/uat/css/generic-style.css" />
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <script src="js/api-check.js"></script>
+    <!-- This is the latest version of angular (at the time this template was created) -->
+    <script src="js/angular.js"></script>
+    <!-- This is the current state of master for formly core. -->
+    <script src="js/formly.js"></script>
+    <!-- This is the current state of master for the bootstrap templates -->
+    <script src="js/angular-formly-templates-bootstrap.js"></script>
+    <script type="text/javascript" src="js/sha256.js"></script>
+    <script type="text/javascript" src="js/enc-base64-min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">       
+
+    <style type="text/css" media="screen">
+        .fileContainer {
+            overflow: hidden;
+            position: relative;
+            color: #FFF!important;
+            min-width: 280px;
+            max-width: 293px;
+            box-shadow: inherit!important;
+            text-transform: inherit;
+            font-size: 2rem;
+            font-family: 'Open Sans',Arial;
+            /*text-align: right;*/
+
+            background-color:#6419e9;
+            /*background-color:#337ab7;*/
+            border-radius: 32px;
+            border: 1px solid #2e6da4;
+            /*float: left;*/
+            padding: .5em;
+            padding-left: 6rem;
+        }
+
+        .fileContainer [type=file] {
+            cursor: inherit;
+            display: block;
+            /*filter: alpha(opacity=0);*/
+            /*min-height: 100%;
+            min-width: 100%;*/
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+        }
+
+    </style>
+        
+</head>
+<body ng-app="formlyApp" ng-controller="CreateOperationController">
+  <header>
+     <div>
+      <div class="col-xs-10 col-sm-9 col-md-9  col-lg-9">
+        <object class="logo-scotiabank" type="image/svg+xml" data="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/img/scotiabank-solicitud-tdc.svg"></object>
+      </div>
+      <div class="col-xs-2 scotiabank-red col-sm-3 col-md-3 col-lg-3">
+       <div class="div-necesita-ayuda">
+        <div>
+         <span class="dfmxs dfmxs-canvas-telephone"></span>
+        </div>
+        <div>
+         <span class="necesita-ayuda">¿Necesitas ayuda para llenar la solicitud?</span>
+         <p>
+           <strong style="text-decoration:none; color:#333 ">Llámanos </strong>
+           <a href="tel:5514549071 " class="scotiabank-red link-phone">
+            <span>
+              <span class="label-phone">(55) 1454-9071</span>
+            </span>
+          </a>
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="col-xs-12">
+       <div class="divider hidden-xs"></div>
+      </div>
+      <div class="wrap-titulo">
+       <h1>         
+        <span> Tarjeta Viva </span>
+        <span class="pull-right sitioSeguro">
+         <i class="dfmxs dfmxs-canvas-lock scotiabank-red" aria-hidden="true"></i> Sitio seguro
+        </span>
+       </h1>
+      </div>
+     </div>
+  </header>
+
+  <div class="content">     
+    <div class="col-xs-12 legales-text">
+      <label class="fileContainer">
+        <i class="fa fa-camera"></i> Cargar Imagen
+        <input  class="btn btn-raised" id="btn-confirmar" type="file" onchange="angular.element(this).scope().uploadedFile(this)"/>
+      </label>         
+    </div>
+    <canvas id="the-canvas"  style="/*width:120px;*/ height: 3rem;"></canvas>
+  
+    <div class="row">
+      <div class="col-sm-4 wrap-card col-mobile">
+       <div class="fondo-tarjeta white viva">
+        <div class="clearfix"></div>
+            <img src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/img/tarjeta-viva-human.png" alt="Tarjeta de Crédito Viva" class="tarjeta">
+            <span class="label-ingresos-minimos">
+                Ingresos mínimos: <span>$7,500</span>
+            </span>
+            <div class="cajaBeneficiosNew">
+             <div class="container-bullet">
+              <span class="label-ingresos-minimos">
+                Ingresos mínimos: <span>$7,500</span>
+              </span>
+
+              <h2 class="titulo">Cuotas y comisiones</h2>
+              <ul class="bullet-list">
+                <li>
+                 <span class="dfmxs dfmxs-canvas-bullet"></span> Sin cobro de anualidad<sup>1</sup>
+                </li>
+                <li>
+                 <span class="dfmxs dfmxs-canvas-bullet"></span> Tasa de Interés Promedio Anual
+                 <strong>55.62%</strong><sup>2</sup>
+                </li>
+                <li>
+                  <span class="dfmxs dfmxs-canvas-bullet"></span> CAT <strong>81.3%</strong><sup>3</sup>
+                </li>
+              </ul>
+
+              <h2 class="titulo">Beneficios</h2>
+              <ul class="bullet-list">
+                <li>
+                  <span class="dfmxs dfmxs-canvas-bullet"></span> Emisión de boletos sin costo<sup>4</sup>
+                </li>
+                <li>
+                  <span class="dfmxs dfmxs-canvas-bullet"></span> Prioridad de abordaje<sup>5</sup>
+                </li>
+                <li>
+                  <span class="dfmxs dfmxs-canvas-bullet"></span> Fila de documentación express<sup>6</sup>
+                </li>
+                <li>
+                  <span class="dfmxs dfmxs-canvas-bullet"></span> Adelanto de vuelo sin costo<sup>7</sup>
+                </li>
+                <li>
+                  <span class="dfmxs dfmxs-canvas-bullet"></span> Bono de Bienvenida de 15,000 VivaPuntos<sup>8</sup>
+                </li>
+                <li>
+                  <span class="dfmxs dfmxs-canvas-bullet"></span> Hasta 5 kilos extra a bordo<sup>9</sup>
+                </li>
+              </ul>
+              <div class="text-right">
+                <i class="dfmxs dfmxs-canvas-legal" aria-hidden="true"></i>&nbsp;<a href="#" data-toggle="modal" data-target="#modalLegalesDF">Legales</a>
+              </div>
+             </div>
+            </div>
+            <div class="clearfix" id="bullet-mobile-space"></div>
+            <div class="wrap-arrow">
+             <div class="position-arrow">
+              <a href="#" id="mobileDetails">
+                <span class="arrow">
+                 <span id="open_bullet" class="detalles">Ver detalles</span>
+                 <span id="close_bullet" class="detalles" style="display: none;">Ocultar detalles</span>
+                </span>
+              </a>
+             </div>
+            </div>
+       </div>
+      </div>
+      <div class="col-sm-8 wrap-form col-mobile">
+          
+        <form  id="idform"  name="idform">
+            <input data-val="true" data-val-number="El campo TipoProductoTC debe ser un número." data-val-required="The TipoProductoTC field is required." id="SeccionDatosBasicos_TipoProductoTC" name="SeccionDatosBasicos.TipoProductoTC" type="hidden" value="0"><input data-val="true" data-val-required="The TipoProductoVM field is required." id="TipoProductoVM" name="TipoProductoVM" type="hidden" value="Viva">    <!--Valores dinamicos-->
+            <input id="Direccion_EstadoBuroCreditoId" name="SeccionDatosBasicos.Direccion.EstadoBuroCreditoId" type="hidden" value=""><input data-val="true" data-val-length="The field Estado ID * must be a string with a minimum length of 2 and a maximum length of 3." data-val-length-max="3" data-val-length-min="2" id="Direccion_EstadoProspectosId" name="SeccionDatosBasicos.Direccion.EstadoProspectosId" type="hidden" value="">
+            <input data-val="true" data-val-length="The field Estado ID * must be a string with a minimum length of 2 and a maximum length of 3." data-val-length-max="3" data-val-length-min="2" id="DireccionEmpresa_EstadoProspectosId" name="SeccionDatosAdicionales.ConociendoteMas.DireccionEmpresa.EstadoProspectosId" type="hidden" value=""><input id="DireccionEmpresa_EstadoBuroCreditoId" name="SeccionDatosAdicionales.ConociendoteMas.DireccionEmpresa.EstadoBuroCreditoId" type="hidden" value=""><input data-val="true" data-val-number="El campo Nacionalidad debe ser un número." data-val-required="The Nacionalidad field is required." id="NacionalidadId" name="SeccionDatosBasicos.NacionalidadId" type="hidden" value="1"><input data-val="true" data-val-required="Debes seleccionar una opción de como quieres que aparezca tú nombre en la tarjeta" id="NombreTarjeta" name="SeccionDatosAdicionales.YaCasiTerminamos.NombreTarjeta" type="hidden" value=""><input data-val="true" data-val-required="Debes seleccionar una sucursal de entrega" id="SucursalEntregaId" name="SeccionDatosAdicionales.YaCasiTerminamos.SucursalEntregaId" type="hidden" value=""><input id="SucursalDetalles" name="SucursalDetalles" type="hidden" value=""><input value="1" data-val="true" data-val-number="El campo Ingresos Mensuales Comprobables debe ser un número." data-val-range="Los Ingresos Mensuales Comprobables deben ser mayores a 0 y menores o iguales a 999999999" data-val-range-max="999999999" data-val-range-min="1" data-val-required="Ingresos Mensuales Comprobables es Requerido" id="SeccionDatosAdicionales_ConociendoteMas_IngresosMensuales" name="SeccionDatosAdicionales.ConociendoteMas.IngresosMensuales" type="hidden">    <!--Valores default-->
+            <input id="NombreLinio" name="NombreLinio" type="hidden" value=""><input value="0" data-val="true" data-val-number="El campo Dependientes Económicos debe ser un número." data-val-range="Dependientes Económicos es Requerido" data-val-range-max="99" data-val-range-min="0" data-val-required="The Dependientes Económicos field is required." id="SeccionDatosBasicos_NumeroDependientes" name="SeccionDatosBasicos.NumeroDependientes" type="hidden"><input value="O" data-val="true" data-val-length="La longitud máxima en Tipo de Vivienda es de 1 caracter." data-val-length-max="1" id="SeccionDatosBasicos_Direccion_TipoViviendaId" name="SeccionDatosBasicos.Direccion.TipoViviendaId" type="hidden"><input value="M" data-val="true" data-val-length="Estado Civil valor invalido" data-val-length-max="1" id="SeccionDatosBasicos_EstadoCivilId" name="SeccionDatosBasicos.EstadoCivilId" type="hidden"><input value="O" id="SeccionDatosBasicos_EscolaridadId" name="SeccionDatosBasicos.EscolaridadId" type="hidden"><input id="SeccionDatosAdicionales_ConociendoteMas_ActividadId" name="SeccionDatosAdicionales.ConociendoteMas.ActividadId" type="hidden" value="OTRO"><input data-val="true" data-val-length="La longitud maxima de Puesto es de 40 caracteres" data-val-length-max="40" data-val-regex="Carácter Inválido en Puesto" data-val-regex-pattern="([A-Z0-9 ]+)" id="SeccionDatosAdicionales_ConociendoteMas_Puesto" name="SeccionDatosAdicionales.ConociendoteMas.Puesto" type="hidden" value="OTRO"><input data-val="true" data-val-number="El campo Giro de la Empresa debe ser un número." data-val-required="The Giro de la Empresa field is required." id="SeccionDatosAdicionales_ConociendoteMas_GiroEmpresaId" name="SeccionDatosAdicionales.ConociendoteMas.GiroEmpresaId" type="hidden" value="38"><input value="0" data-val="true" data-val-number="El campo Antigüedad Domicilio Actual Años debe ser un número." id="SeccionDatosBasicos_Direccion_TiempoViviendoAnios" name="SeccionDatosBasicos.Direccion.TiempoViviendoAnios" type="hidden"><input value="0" data-val="true" data-val-number="El campo Antigüedad Domicilio Actual Meses debe ser un número." data-val-range=" La Antigüedad Domicilio Actual Meses debe ser mayor o igual a cero y menor o igual a once" data-val-range-max="11" data-val-range-min="0" id="SeccionDatosBasicos_Direccion_TiempoViviendoMeses" name="SeccionDatosBasicos.Direccion.TiempoViviendoMeses" type="hidden">    <input type="hidden" id="errores" name="errores">
+
+            <div class="content-accordion">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <!-- Inicia Grupo Acordeon -->
+                <div class="labelReintentos">
+                  <div class="alert alert-danger" role="alert">
+                    <div><i class="dfmxs dfmxs-canvas-info" aria-hidden="true"></i></div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="labelValidacionBack">
+                  <div class="alert alert-danger" role="alert">
+                    <div><i class="dfmxs dfmxs-canvas-warning" aria-hidden="true"></i></div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading actives" role="tab" id="headingDatospersonales">
+                    <h4 class="panel-title titulo">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="btnCollapseOne">
+                      <i class="dfmxs dfmxs-canvas-user" aria-hidden="true" id="iconoUsuario"></i> Datos personales
+                      <i class="indicator dfmxs dfmxs-canvas-arrow-up pull-right"></i>
+                    </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingDatospersonales">
+                    <div class="panel-body">
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <p>Introduce tus datos tal y como aparecen en tu
+                            <strong style="color: #606060;">identificación oficial</strong>
+                          </p>
+                        </div>
+                      </div>
+
+                      <!--Primer y Segundo Nombre -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty" id="classNombres">
+                            <label class="control-label" for="SeccionDatosBasicos_PrimerNombre" id="lblPrimerNombre">PrimerNombre
+                            </label>
+                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_PrimerNombre" name="ReferenciaPersonalMV.PrimerNombre" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerNom">
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty" id="segundo_nombre">
+                            <label class="control-label" for="SeccionDatosBasicos_SegundoNombre">Segundo Nombre</label>
+                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_SegundoNombre" name="ReferenciaPersonalMV.SegundoNombre" tabindex="@(++tabindex)" type="text" value="" ng-model="user.segundoNom">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Primer y Segundo Apellido-->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="control-label" for="SeccionDatosBasicos_ApellidoPaterno" id="lblApellidoPaterno">Primer Apellido</label>
+                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_ApellidoPaterno" name="ReferenciaPersonalMV.ApellidoPaterno" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerApe">
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="control-label" for="SeccionDatosBasicos_ApellidoMaterno" id="lblApellidoMaterno">Segundo Apellido</label>
+                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_ApellidoMaterno" name="ReferenciaPersonalMV.ApellidoMaterno" tabindex="@(++tabindex)" type="text" value="" ng-model="user.segundoApe">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Fecha Nacimiento y RFC -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label for="RfcAux" class="control-label">Fecha de Nacimiento</label>
+                              <input autocomplete="off" class="form-control" id="FechaNacimiento" name="FechaNacimiento"  type="text" value="" ng-model="user.nacimiento">
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label for="Rfc" class="control-label">RFC</label>
+                            <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_Rfc" name="SeccionDatosBasicos.Rfc" tabindex="@(++tabindex)" type="text" value="" ng-model="user.rfc">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Genero y Nacionalidad -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty" style="margin-top:10px;">
+                            <h6 class="tituloSelect">Género</h6>
+                            <label class="wrap">
+                              <span class="select-hide-arrow-ie9">
+                                <select class="form-control" id="SeccionDatosBasicos_SexoId" name="SeccionDatosBasicos.SexoId"  tabindex="@(++tabindex)"" ng-model="user.sexo">
+                                  <option value="">SELECCIONA</option>
+                                  <option value="Femenino">FEMENINO</option>
+                                  <option value="Masculino">MASCULINO</option>
+                                </select>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="nacionalidad">
+                            <h6 class="tituloSelect">Nacionalidad</h6>
+                            <label class="wrap">
+                              <span class="select-hide-arrow-ie9">
+                                <div class="form-group">
+                                  <select class="form-control ignore" id="NacionalidadIdMV" name="NacionalidadIdMV" ng-model="user.nacionalidad">
+                                    <option value="201">AFGANO(A)</option>
+                                    <option value="101">ALBANES</option>
+                                    <option value="102">ALEMAN (A)</option>
+                                    <option value="401">ANGOLEÑO</option>
+                                    <option value="31">ANTIGUA</option>
+                                    <option value="133">ANTILLAS</option>
+                                    <option value="202">ARABE</option>
+                                    <option value="402">ARGELIA</option>
+                                    <option value="3">ARGENTINO (A)</option>
+                                    <option value="235">ARMENIO</option>
+                                    <option value="131">ARUBEÑO</option>
+                                    <option value="301">AUSTRALIANO (A)</option>
+                                    <option value="103">AUSTRIACO (A)</option>
+                                    <option value="236">AZERBAYANO</option>
+                                    <option value="36">BAHAMAS</option>
+                                    <option value="203">BANGLADESH</option>
+                                    <option value="32">BARBADENSE</option>
+                                    <option value="446">BAREINI</option>
+                                    <option value="104">BELGA</option>
+                                    <option value="5">BELICENO(A)</option>
+                                    <option value="129">BERMUDEÑO</option>
+                                    <option value="7">BOLIVIANO (A)</option>
+                                    <option value="144">BOSNIOHERZEGOVINO</option>
+                                    <option value="9">BRASILEÑO (A)</option>
+                                    <option value="105">BULGARO (A)</option>
+                                    <option value="403">BURUNDES</option>
+                                    <option value="404">BUTSWUANO</option>
+                                    <option value="34">CAIMANES</option>
+                                    <option value="237">CAMBOYA</option>
+                                    <option value="405">CAMERUNENSE</option>
+                                    <option value="11">CANADIENSE</option>
+                                    <option value="425">CENTROAFRICANO</option>
+                                    <option value="407">CHADIANO</option>
+                                    <option value="135">CHECOSLOVACA</option>
+                                    <option value="19">CHILENO (A)</option>
+                                    <option value="208">CHINO (A)</option>
+                                    <option value="209">CHIPRIOTA</option>
+                                    <option value="13">COLOMBIANO (A)</option>
+                                    <option value="207">COREANO (A)</option>
+                                    <option value="15">COSTARRICENSE</option>
+                                    <option value="134">CROATA</option>
+                                    <option value="17">CUBANO (A)</option>
+                                    <option value="408">DAHOMEYANO</option>
+                                    <option value="107">DANES(A)</option>
+                                    <option value="424">DEMOCRATIC</option>
+                                    <option value="35">DOMINICA</option>
+                                    <option value="26">DOMINICANO(A)</option>
+                                    <option value="21">ECUATORIANO (A)</option>
+                                    <option value="409">EGIPCIO (A)</option>
+                                    <option value="441">EMIRATOS ARABES</option>
+                                    <option value="139">ESLOVAQUIA</option>
+                                    <option value="140">ESLOVENIO(A)</option>
+                                    <option value="ESPAÑOL (A)">ESPAÑOL (A)</option>
+                                    <option value="136">ESTONIO</option>
+                                    <option value="410">ETIOPE</option>
+                                    <option value="239">FILIPINAS</option>
+                                    <option value="110">FINLANDES (A)</option>
+                                    <option value="111">FRANCES (A)</option>
+                                    <option value="10">FRANCOGUAYANES</option>
+                                    <option value="411">GABONES</option>
+                                    <option value="443">GAMBIA</option>
+                                    <option value="447">GEORGIANO</option>
+                                    <option value="412">GHANES</option>
+                                    <option value="37">GRANADA</option>
+                                    <option value="112">GRIEGO(A)</option>
+                                    <option value="4">GROELANDES(A)</option>
+                                    <option value="1001">GUAMEÑO (A)</option>
+                                    <option value="6">GUATEMALTECO (A)</option>
+                                    <option value="8">GUAYANES</option>
+                                    <option value="455">GUINEANO (A)</option>
+                                    <option value="12">HAITIANO (A)</option>
+                                    <option value="428">HISPANOSAHARIANO</option>
+                                    <option value="114">HOLANDES (A)</option>
+                                    <option value="14">HONDUREÑO (A)</option>
+                                    <option value="210">HONGKONES</option>
+                                    <option value="115">HUNGARO(A)</option>
+                                    <option value="213">INDONESICO(A)</option>
+                                    <option value="211">INDU</option>
+                                    <option value="113">INGLES (A)</option>
+                                    <option value="214">IRAKI</option>
+                                    <option value="215">IRANI</option>
+                                    <option value="116">IRLANDES (A)</option>
+                                    <option value="117">ISLANDES(A)</option>
+                                    <option value="38">ISLAS COOK</option>
+                                    <option value="216">ISRAELI</option>
+                                    <option value="118">ITALIANO (A)</option>
+                                    <option value="16">JAMAIQUINO (A)</option>
+                                    <option value="217">JAPONES (A)</option>
+                                    <option value="218">JORDANO(A)</option>
+                                    <option value="449">KAZAKO</option>
+                                    <option value="413">KENIANO (A)</option>
+                                    <option value="448">KIRGUIS</option>
+                                    <option value="219">KUEIT</option>
+                                    <option value="220">LAOSIANO</option>
+                                    <option value="414">LESOTENSE</option>
+                                    <option value="221">LIBANES</option>
+                                    <option value="415">LIBERIA</option>
+                                    <option value="416">LIBICO(A)</option>
+                                    <option value="137">LITUANO</option>
+                                    <option value="119">LUXEMBURGUES</option>
+                                    <option value="145">MACEDONIO</option>
+                                    <option value="222">MALASIO</option>
+                                    <option value="417">MALAWI</option>
+                                    <option value="418">MALIENSE</option>
+                                    <option value="138">MALTES</option>
+                                    <option value="406">MARFILEÑO(A)</option>
+                                    <option value="419">MARROQUI</option>
+                                    <option value="451">MAURICIANO (NA)</option>
+                                    <option value="420">MAURITANO</option>
+                                    <option value="MEXICANO (A)">MEXICANO (A)</option>
+                                    <option value="450">MOLDAVO (A)</option>
+                                    <option value="223">MONGOLES</option>
+                                    <option value="421">MOZAMBIQUEÑO</option>
+                                    <option value="142">MYANMAR</option>
+                                    <option value="143">NAURU</option>
+                                    <option value="303">NEOZELANDES(A)</option>
+                                    <option value="224">NEPALI</option>
+                                    <option value="18">NICARAGUENSE</option>
+                                    <option value="422">NIGERINO</option>
+                                    <option value="423">NIGIERIANO(A)</option>
+                                    <option value="452">NO DEFINIDO</option>
+                                    <option value="238">NORCOREANO</option>
+                                    <option value="445">NORMARIANO</option>
+                                    <option value="2">NORTEAMERICANO (A)</option>
+                                    <option value="120">NORUEGO (A)</option>
+                                    <option value="225">OMANI</option>
+                                    <option value="442">PALESTINA</option>
+                                    <option value="20">PANAMEÑO (A)</option>
+                                    <option value="302">PAPU NEOGUINEANO</option>
+                                    <option value="226">PAQUISTANI</option>
+                                    <option value="22">PARAGUAYO (A)</option>
+                                    <option value="24">PERUANO (A)</option>
+                                    <option value="121">POLACO (A)</option>
+                                    <option value="122">PORTUGES(A)</option>
+                                    <option value="25">PUERTORRIQUEÑO (A)</option>
+                                    <option value="426">RHODESIANO</option>
+                                    <option value="427">RUANDES</option>
+                                    <option value="123">RUMANO (A)</option>
+                                    <option value="124">RUSO (A)</option>
+                                    <option value="23">SALVADOREÑO (A)</option>
+                                    <option value="444">SAMOANO (A) ESTADOUNIDENSES/SAMOAMERICANO</option>
+                                    <option value="40">SAN VICENTE</option>
+                                    <option value="429">SENEGAL</option>
+                                    <option value="146">SERBIO</option>
+                                    <option value="430">SIERRA</option>
+                                    <option value="233">SINGAPUR</option>
+                                    <option value="228">SIRIO(A)</option>
+                                    <option value="431">SOSOMMALI</option>
+                                    <option value="206">SRILANQUES</option>
+                                    <option value="432">SUDANES (A)</option>
+                                    <option value="125">SUECO (A)</option>
+                                    <option value="126">SUIZO (A)</option>
+                                    <option value="433">SURAFRICANO (A)</option>
+                                    <option value="27">SURINAMES</option>
+                                    <option value="229">TAHILANDES</option>
+                                    <option value="41">TAHITI</option>
+                                    <option value="234">TAIWANES</option>
+                                    <option value="434">TANZANO</option>
+                                    <option value="435">TOGOLES</option>
+                                    <option value="28">TRINITENSE</option>
+                                    <option value="436">TUNECINO</option>
+                                    <option value="230">TURCO(A)</option>
+                                    <option value="127">UCRANIANO(A)</option>
+                                    <option value="437">UGANDES</option>
+                                    <option value="141">UNION MONETARIA EUROPEA</option>
+                                    <option value="29">URUAGUAYO (A)</option>
+                                    <option value="453">USBECO (A)</option>
+                                    <option value="30">VENEZOLANO (A)</option>
+                                    <option value="231">VIETNAMITA</option>
+                                    <option value="33">VIRGENENSE</option>
+                                    <option value="454">VIRGENENSE BRITANICO (A)</option>
+                                    <option value="232">YEMENI</option>
+                                    <option value="128">YUGOSLAVO (A)</option>
+                                    <option value="438">ZAIREÑO</option>
+                                    <option value="439">ZAMBIANO</option>
+                                    <option value="440">ZIMBABUENSE</option>
+                                  </select>
+                                </div>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Teléfono -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="telefono-contacto">
+                            <div class="form-group label-floating inner-addon-right is-empty">
+                              <label class="control-label" for="SeccionDatosBasicos_TelefonoDomicilio" id="lblTelefonoDomicilio">Teléfono Fijo</label>
+                              <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_TelefonoDomicilio" name="SeccionDatosBasicos.TelefonoDomicilio"  tabindex="@(++tabindex)" title="Número a 10 dígitos con clave LADA" type="tel" value="" ng-model="user.telefono">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="telefono-contacto">
+                            <div class="form-group label-floating inner-addon-right is-empty">
+                              <label class="control-label" for="SeccionDatosBasicos_NumeroCelular" id="lblNumeroCelular">Teléfono Celular</label>
+                                <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_NumeroCelular" name="SeccionDatosBasicos.NumeroCelular" tabindex="@(++tabindex)" title="Últimos 10 dígitos con clave LADA" type="tel" value="" ng-model="user.celular">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Correo Electrónico -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="control-label" for="SeccionDatosBasicos_CorreoElectronico" id="lblCorreoElectronico">Correo Electrónico</label>
+                              <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_CorreoElectronico" name="SeccionDatosBasicos.CorreoElectronico" tabindex="@(++tabindex)" type="email" value="" ng-model="user.correo">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="control-label" for="SeccionDatosBasicos_CorreoElectronicoConfirmacion" id="lblCorreoElectronicoConfirmacion">Confirma Correo Electrónico</label>
+                              <input autocomplete="off" class="form-control"  id="SeccionDatosBasicos_CorreoElectronicoConfirmacion" name="SeccionDatosBasicos.CorreoElectronicoConfirmacion" tabindex="@(++tabindex)" type="email" value="" ng-model="user.confirmaCorreo">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-12 col-sm 12 text-center" id="flecha-Datospersonales">
+                          <a class="arrow-double-down" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="dfmxs dfmxs-canvas-next text-center icon-3x double-d" aria-hidden="true"></i>
+                            <span>Siguiente</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Domicilio -->
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTudomicilio">
+                    <h4 class="panel-title titulo">
+                      <a class="collapsed inactiveTab" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="anclaDos">
+                        <i class="dfmxs dfmxs-canvas-home" id="iconoMapa"></i> Tu domicilio
+                        <i class="indicator dfmxs dfmxs-canvas-arrow-down  pull-right"></i>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTudomicilio">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <p>Introduce tus datos tal y como aparecen en tu <strong>comprobante de domicilio.</strong><br>Será necesario presentarlo en sucursal para recibir la Tarjeta</p>
+                        </div>
+                      </div>
+
+                      <!--Calle y NoExt -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="control-label" for="SeccionDatosBasicos_Direccion_Calle" id="lblDireccion_Calle">Calle</label>
+                              <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_Direccion_Calle" name="SeccionDatosBasicos.Direccion.Calle" tabindex="@(++tabindex)" type="text" value="" ng-model="user.calle">
+                              <input type="hidden" name="Direccion_Calle">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="control-label" for="SeccionDatosBasicos_Direccion_NumeroExterior" id="lblDireccion_NumeroExterior">Número Exterior</label>
+                              <input autocomplete="off" class="form-control"  id="SeccionDatosBasicos_Direccion_NumeroExterior" name="SeccionDatosBasicos.Direccion.NumeroExterior" tabindex="@(++tabindex)" type="text" value="" ng-model="user.numExterior">
+                              <input type="hidden" name="Direccion_NumeroExterior">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--Num Int y CP -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="control-label" for="SeccionDatosBasicos_Direccion_NumeroInterior" id="lblDireccion_NumeroInterior">Número Interior</label>
+                            <input autocomplete="off" class="form-control"  id="SeccionDatosBasicos_Direccion_NumeroInterior" name="SeccionDatosBasicos.Direccion.NumeroInterior" tabindex="@(++tabindex)" type="text" value="" ng-model="user.numInterior">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="control-label" for="SeccionDatosBasicos_Direccion_CodigoPostal" id="lblDireccion_CodigoPostal">Código Postal</label>
+                            <input autocomplete="off" class="form-control" id="codigopostaldomicilio" name="SeccionDatosBasicos.Direccion.CodigoPostal" tabindex="@(++tabindex)" type="number" value="" ng-model="user.cp">
+                                    <p class="error errorCodigoPostal" id="pcpdom"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Colonia y Delegación -->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label class="wrap">
+                              <span class="select-hide-arrow-ie9">
+                                <label class="control-label" for="SeccionDatosBasicos_Direccion_Colonia" id="lblDireccion_Colonia">Colonia o fraccionamiento</label>
+                                  <!-- <select class="form-control ignore" id="tmpSeccionDatosBasicos_Direccion_Colonia" name="Coloniasdom"></select> -->
+                                  <!-- <input class="labelDinamico"  id="SeccionDatosBasicos_Direccion_Colonia" name="SeccionDatosBasicos.Direccion.Colonia" type="hidden" value="" ng-model="user.colonia"> -->
+                                  <input class="form-control"  id="SeccionDatosBasicos_Direccion_Colonia" name="SeccionDatosBasicos.Direccion.Colonia" type="text" value="" ng-model="user.colonia">
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="form-group label-floating inner-addon-right is-empty">
+                            <label for="DireccionDomicilio_Delegacion" class="control-label">Delegación o municipio</label>
+                            <input class="form-control" id="DelegacionDomicilio" name="DelegacionDomicilio" tabindex="@(++tabindex)" type="text" value="" ng-model="user.delMun">
+                            <!--<input class="form-control" data-val="true" data-val-length="La longitud máxima en Delegación o Municipio es de 40 caracteres." data-val-length-max="40" data-val-required="Delegación o Municipio es Requerido" id="SeccionDatosBasicos_Direccion_Delegacion" name="SeccionDatosBasicos.Direccion.Delegacion" type="hidden" value="" readonly="readonly">-->
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Estado y Ciudad-->
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="estados">
+                            <div class="form-group label-floating inner-addon-right is-empty">
+                              <label for="Direccion_Estado" class="control-label">Estado</label><!-- 
+                              <input class="form-control" data-val="true" data-val-required="Estado es Requerido" id="SeccionDatosBasicos_Direccion_Estado" name="SeccionDatosBasicos.Direccion.Estado" tabindex="@(++tabindex)" type="hidden" value="" readonly="readonly"> -->
+                              <input class="form-control" id="EstadoDomicilio" name="EstadoDomicilio" tabindex="@(++tabindex)" type="text" value="" ng-model="user.estado">
+                              <!-- <input type="hidden" name="Direccion_Estado"> -->
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="ciudad">
+                            <div class="form-group label-floating inner-addon-right is-empty">
+                              <label class="control-label" for="SeccionDatosBasicos_Direccion_Ciudad">Ciudad</label>
+                              <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_Direccion_Ciudad" name="SeccionDatosBasicos.Direccion.Ciudad" tabindex="@(++tabindex)" type="text" value="" ng-model="user.ciudad">
+                              <input type="hidden" name="Direccion_Ciudad">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- <div class="row">
+                        <div class="col-xs-12 col-sm 12 text-center" id="flecha-Tudomicilio">
+                          <a class="arrow-double-down" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="dfmxs dfmxs-canvas-next text-center icon-3x double-d" aria-hidden="true"></i>
+                            <span>Siguiente</span>
+                          </a>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Codigo de promo -->
+                <div class="col-xs-12 bg-gray text-gray-creditos">
+                  <div class="disclaimer">
+                    <div>
+                      <div class="checkbox">
+                        <label for="SeccionDatosAdicionales_YaCasiTerminamos_DeclaracionVeracidad">
+                          <input class="check-box" data-val="true" data-val-required="The Manifiesto que he leído la presente Solicitud, así como el contenido del contrato de apertura de crédito y estoy de acuerdo con sus términos y condiciones, conozco su valor y consecuencias legales. Igualmente autorizo a Scotiabank Inverlat, S.A., Institución de Banca Múltiple, Grupo Financiero Scotiabank Inverlat  o a sus representantes para verificar la autenticidad de los datos asentados. field is required." id="SeccionDatosAdicionales_YaCasiTerminamos_DeclaracionVeracidad" name="SeccionDatosAdicionales.YaCasiTerminamos.DeclaracionVeracidad" type="checkbox" value="true"><span class="checkbox"><span class="check"></span></span><input name="SeccionDatosAdicionales.YaCasiTerminamos.DeclaracionVeracidad" type="hidden" value="false">
+                        </label>
+                      </div>
+                    </div>
+                    <div>Declaración de veracidad de información</div>
+                      <div>
+                        <a id="label-text-veracidad">
+                          Detalles <i class="dfmxs dfmxs-canvas-arrow-down" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                  </div>
+                  <div id="text-veracidad" class="col-xs-12 min-p">
+                    <p>
+                      Manifiesto que he leído la presente Solicitud, así
+                      como el contenido del contrato de apertura de
+                      Crédito y estoy de acuerdo con sus términos y
+                      condiciones, conozco su valor y consecuencias
+                      legales. Igualmente autorizo a Scotiabank Inverlat,
+                      S.A., Institución de Banca Múltiple, Grupo
+                      Financiero Scotiabank Inverlat o a sus
+                      representantes para verificar la autenticidad de los
+                      datos asentados.
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Acepto terminos-->  
+                <div class="col-xs-12 bg-gray text-gray-creditos">
+                  <div class="disclaimer">
+                    <div>
+                      <div class="checkbox">
+                        <label for="SeccionDatosAdicionales_YaCasiTerminamos_AutorizacionMercadeo">
+                          <input class="check-box" data-val="true" data-val-required="The Acepto y manifiesto mi consentimiento en que podré recibir ofrecimientos de productos y/o servicios financieros por Scotiabank Inverlat, S.A., y/o Crédito Familiar, S.A. de C.V., y/o Globalcard, S.A. de C.V. o por cualesquiera de las Entidades que formen parte de su Grupo Financiero o Económico, que se encuentren o pudieran encontrarse ligados o ser adicionales a los productos y/o servicios solicitados, siendo de mi conocimiento de que cuento con el derecho innegable de contratar cualesquiera de ellos con cualquier tercero. De igual forma, manifiesto mi aceptación en que Scotiabank Inverlat, S.A. y/o Crédito Familiar, S.A. de C.V., y/o Globalcard, S.A. de C.V. podrán compartir mi información con cualesquiera de las Entidades que formen parte de su Grupo Financiero o Económico, para que me ofrezcan otro tipo de productos y servicios adicionales relacionados con el producto o servicio que estoy solicitando. field is required." id="SeccionDatosAdicionales_YaCasiTerminamos_AutorizacionMercadeo" name="SeccionDatosAdicionales.YaCasiTerminamos.AutorizacionMercadeo" type="checkbox" value="true"><span class="checkbox"><span class="check"></span></span><input name="SeccionDatosAdicionales.YaCasiTerminamos.AutorizacionMercadeo" type="hidden" value="false">
+                        </label>
+                      </div>
+                    </div>
+                    <div>Autorización para uso de datos con fines de mercadeo</div>
+                    <div>
+                        <a id="label-text-fines-mercado">
+                            Detalles <i class="dfmxs dfmxs-canvas-arrow-down" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                  </div>
+                  <div id="text-fines-mercado" class="col-xs-12 min-p">
+                    <p>
+                      Acepto y manifiesto mi consentimiento en que
+                      podré recibir ofrecimientos de productos y/o
+                      servicios financieros por Scotiabank Inverlat, S.A., y/
+                      o Crédito Familiar, S.A. de C.V. y/o Globalcard, S.A.
+                      de C.V. o por cualesquiera de las Entidades que
+                      formen parte de su Grupo Financiero o Económico,
+                      que se encuentren o pudieran encontrarse ligados
+                      o ser adicionales a los productos y/o servicios
+                      solicitados, siendo de mi conocimiento de que
+                      cuento con el derecho innegable de contratar
+                      cualesquiera de ellos con cualquier tercero. De
+                      igual forma, manifiesto mi aceptación en que
+                      Scotiabank Inverlat, S.A. y/o Crédito Familiar, S.A. de
+                      C.V., y/o Globalcard, S.A. de C.V. podrán compartir
+                      mi información con cualesquiera de las Entidades
+                      que formen parte de su Grupo Financiero o
+                      Económico, para que me ofrezcan otro tipo de
+                      productos y servicios adicionales relacionados con
+                      el producto o servicio que estoy solicitando.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- Termina Acordeon principal-->
+
+
+            <div class="col-xs-12 legales-text">
+              <div class="text-center wrap-btn">
+                <button class="btn-siguiente btn btn-raised" id="btn-confirmar" type="button" ng-click="creatOperation(user)">
+                  <i class="dfmxs dfmxs-canvas-lock"></i> Enviar solicitud
+                </button>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            
+            <!-- Modal (Loader) -->
+            <div class="modal fade backSplash" id="loader" role="dialog" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content m-splash">
+                        <div class="modal-body">
+                            <div class="lightbox">
+                                <div class="row tiempoInfo">
+                                    <div class="col-md-12">Tiempo estimado para terminar tu solicitud: <span class="scotiabank-red">10 minutos</span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <strong>Para completar tu solicitud necesitas:</strong>
+                                        <ul>
+                                            <li>
+                                                <i class="dfmxs dfmxs-canvas-bullet tarjeta"></i>
+                                                RFC
+                                            </li>
+                                            <li>
+                                                <i class="dfmxs dfmxs-canvas-bullet tarjeta"></i>
+                                                Identificación oficial
+                                                <span class="dfmxs dfmxs-canvas-info" aria-hidden="true" data-toggle="tooltip" data-html="true" title="" data-placement="top" data-original-title="• Credencial de elector<br />• Pasaporte<br />• Cédula profesional<br />• FM2 o FM3 (en caso de ser extranjero)"></span>
+
+                                            </li>
+                                            <li>
+                                                <i class="dfmxs dfmxs-canvas-bullet tarjeta"></i>
+                                                Comprobante de domicilio
+                                                <span class="dfmxs dfmxs-canvas-info" aria-hidden="true" data-toggle="tooltip" data-html="true" title="" data-placement="top" data-original-title="Recibo de luz, agua, telefonía fija<br>o celular, TV por cable o estado<br>de cuenta bancario"></span>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 respuestaInfo">
+                                        <i class="dfmxs dfmxs-canvas-idea tarjeta"></i>
+                                        <div>
+                                            Obtén respuesta inmediata<br>
+                                            Recibe la Tarjeta en la sucursal de tu elección
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="btn-siguiente btn btn-raised" id="estoyListo" type="button">
+                                            ¡Estoy listo!
+                                        <div class="ripple-container"><div class="ripple ripple-on ripple-out" style="left: 147.5px; top: 3.96875px; background-color: rgb(255, 255, 255); transform: scale(35);"></div></div></button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal (Procesando) -->
+            <div class="modal fade backSplash" id="procesando" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content m-splash">
+                            <div class="modal-body">
+                                <div class="lightbox">
+                                    <img class="loaderLogo" src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/img/scotiabank.svg">
+                                    <p class="procesando">Estamos procesando tu solicitud.<span></span><span>.</span><span>.</span></p>
+                                    <div class="loader"></div>
+                                    <img class="loaderTrusteer" src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/img/trusteer-logo.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            <!--Modal confirmación de información-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title header-format" id="myModalLabel">Confirmación de envío</h4>
+                  </div>
+                  <div class="modal-body modal-body-format">
+                    Por favor confirma que la información que ingresaste es correcta.<br> Al seleccionar la opción <strong>Aceptar</strong> no podrás hacer cambios en la misma
+                  </div>
+                  <div class="modal-footer modal-footer-pad">
+                    <button type="button" class="btn btn-siguiente-revisar btn-raised" data-dismiss="modal" id="modalConfirmacionRevisar">Revisar</button>
+                    <button type="submit" class="btn btn-siguiente-modal btn-raised" name="UnicPage:Siguiente" id="modalConfirmacionAceptar">Aceptar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!--Modal confirmación de información-->
+            <div class="modal fade" id="myModalError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title header-format" id="myModalLabel">Tu solicitud está incompleta.</h4>
+                    <p>Para poder enviarla necesitamos que proporciones los siguientes datos:</p>
+                  </div>
+                  <div class="modal-body modal-body-format" style="padding-top:0;">
+                    <div class="validationStatus">
+                      <div id="feedbackDatosPersonales">
+                        <i class="dfmxs dfmxs-canvas-warning" aria-hidden="true"></i> Datos personales
+                        <ul>
+                            <li class="feedbackPrimerNombre">
+                              Primer nombre
+                            </li>
+                            <li class="feedbackPrimerApellido">
+                              Primer apellido
+                            </li>
+                            <li class="feedbackGenero">
+                              Género
+                            </li>
+                            <li class="feedbackRFC">
+                              RFC
+                            </li>
+                            <li class="feedbackNacionalidad">
+                              Nacionalidad
+                            </li>
+                            <li class="feedbackTelefonoFijo">
+                              Teléfono fijo
+                            </li>
+                            <li class="feedbackTelefonoCelular">
+                              Teléfono celular
+                            </li>
+                            <li class="feedbackCorreoElectronico">
+                              Correo electrónico
+                            </li>
+                            <li class="feedbackCCorreoElectronico">
+                              Confirmación de correo electrónico
+                            </li>
+                        </ul>
+                      </div>
+                      <div id="feedbackTuDomicilio">
+                        <i class="dfmxs dfmxs-canvas-warning" aria-hidden="true"></i> Tu Domicilio
+                        <ul>
+                          <li class="feedbackCalle">
+                            Calle
+                          </li>
+                          <li class="feedbackNoExterior">
+                            Número exterior
+                          </li>
+                          <li class="feedbackCP">
+                            Código Postal
+                          </li>
+                          <li class="feedbackColonia">
+                            Colonia
+                          </li>
+                          <li class="feedbackDelegacion">
+                            Delegación
+                          </li>
+                          <li class="feedbackEstado">
+                            Estado
+                          </li>
+                          <li class="feedbackCiudad">
+                            Ciudad
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="feedbackDondeTrabajas">
+                        <i class="dfmxs dfmxs-canvas-warning" aria-hidden="true"></i> ¿Dónde trabajas?
+                        <ul>
+                          <li class="feedbackOcupacion">
+                          Ocupación
+                          </li>
+                          <li class="feedbackIngresosMensuales">
+                            Ingresos mensuales comprobables
+                          </li>
+                          <li class="feedbackNombreEmpresa">
+                            Nombre de la empresa
+                          </li>
+                          <li class="feedbackNombreCalle">
+                            Calle
+                          </li>
+                          <li class="feedbackNoExterior">
+                            Número exterior
+                          </li>
+                          <li class="feedbackCP">
+                            Código Postal
+                          </li>
+                          <li class="feedbackColonia">
+                            Colonia
+                          </li>
+                          <li class="feedbackDelegacion">
+                            Delegación
+                          </li>
+                          <li class="feedbackEstado">
+                            Estado
+                          </li>
+                          <li class="feedbackCiudad">
+                            Ciudad
+                          </li>
+                          <li class="feedbackTelefonoEmpresa">
+                            Teléfono de tu empleo
+                          </li>
+                          <li class="feedbackAntiguedadAnos">
+                            Años de antigüedad en tu empleo
+                          </li>
+                          <li class="feedbackAntiguedadMeses">
+                            Meses de antigüedad en tu empleo
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="feedbackReferenciasPersonales">
+                        <i class="dfmxs dfmxs-canvas-warning" aria-hidden="true"></i> Referencias personales
+                        <ul>
+                          <li class="feedbackPrimerNombreFamiliar">
+                            Primer nombre de tu referencia familiar
+                          </li>
+                          <li class="feedbackPrimerApellidoFamiliar">
+                            Primer apellido de tu referencia familiar
+                          </li>
+                          <li class="feedbackTelefonoFamiliar">
+                            Teléfono de contacto de tu referencia familiar
+                          </li>
+                          <li class="feedbackPrimerNombrePersonal">
+                            Primer nombre de tu referencia personal
+                          </li>
+                          <li class="feedbackPrimerApellidoPersonal">
+                            Primer apellido de tu referencia personal
+                          </li>
+                          <li class="feedbackTelefonoPersonal">
+                            Teléfono de contacto de tu referencia personal
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="feedbackTuCreditos">
+                        <i class="dfmxs dfmxs-canvas-warning" aria-hidden="true"></i> Tus créditos
+                        <ul>
+                          <li class="feedbackTitularTarjetaBancaria">
+                            Indicar si eres titular de alguna Tarjeta de Crédito Bancaria
+                          </li>
+                          <li class="feedbackTitularTarjetaComercial">
+                            Indicar si eres titular de alguna Tarjeta de Crédito Comercial
+                          </li>
+                          <li class="feedbackUltimos4Digitos">
+                            Últimos 4 dígitos de la Tarjeta de Crédito
+                          </li>
+                          <li class="feedbackCreditoHipotecario">
+                            Indicar si eres titular de algún Crédito Hipotecario
+                          </li>
+                          <li class="feedbackCreditoAutomotriz">
+                            Indicar si eres titular de algún Crédito Automotriz
+                          </li>
+                          <li class="feedbackAutorizacionConsultaBuro">
+                            Autorización para consultar el Buró de Crédito
+                            <span class="dfmxs dfmxs-canvas-info" aria-hidden="true" data-toggle="tooltip" data-html="true" title="" data-placement="top" data-original-title="Haz click en la casilla de verificación"></span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="feedbackPersonalizaTuTarjeta">
+                        <i class="dfmxs dfmxs-canvas-warning" aria-hidden="true"></i> Personaliza tu tarjeta
+                        <ul>
+                          <li class="feedbackNombreTarjeta">
+                            Seleccionar el nombre que aparecerá en la Tarjeta de Crédito
+                          </li>
+                          <li class="feedbackSucursalEntrega">
+                            Seleccionar una Sucursal para recoger la Tarjeta de Crédito
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="feedbackDeclaracionVeracidadInformacion">
+                        <i class="dfmxs dfmxs-canvas-warning" aria-hidden="true"></i> Declaración de veracidad de información
+                        <span class="dfmxs dfmxs-canvas-info" aria-hidden="true" data-toggle="tooltip" data-html="true" title="" data-placement="top" data-original-title="Haz click en la casilla de verificación"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer modal-footer-pad">
+                    <button type="button" class="btn btn-siguiente-modal btn-raised" data-dismiss="modal" id="modalValidacionRevisar">Regresar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+        </form>    
+
+        <!--Modal legales-->
+        <div class="modal fade" id="modalLegalesDF" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title header-format" id="myModalLabel"> Legales</h4>
+                </div>
+                <div class="modal-body modal-body-format">
+                  <sup>1</sup>
+                    Se extenderá si cada Tarjeta, titular y adicionales realizan al menos una transacción al mes, una compra al año en los canales directos de VivaAerobus y se mantiene al corriente en sus pagos todos los meses.<br>
+                  <sup>2</sup>
+                    Tasa de interés variable.<br>
+                  <sup>3</sup>
+                    CAT Promedio sin IVA.<br>
+                  <sup>4</sup>
+                    Al utilizar exclusivamente la Tarjeta Viva como medio de pago de sus vuelos, no se cobrará el cargo por emisión de boleto en cada tramo de viaje el cual tiene un costo aproximado de $150 pesos, beneficio limitado al Tarjetahabiente, hasta por un máximo de $450 pesos, por viaje redondo.<br>
+                  <sup>5</sup>
+                    El Tarjetahabiente y todos los acompañantes incluidos en la reservación tendrán prioridad en el abordaje del avión, al comprar los boletos de avión con la Tarjeta de Viva y mostrar al prersonal de VivaAerobus la Tarjeta Viva al momento de abordar.<br>
+                  <sup>6</sup>
+                    El Tarjetahabiente y todos los acompañantes incluidos en la reservación podrán utilizar la fila de documentación “express” o rápida de VivaAerobus, al comprar los boletos de avión con la Tarjeta Viva y mostrar al personal de mostrador de VivaAerobus la Tarjeta Viva, lo anterior siempre y cuando se presenten antes del cierre del mostrador.<br>
+                  <sup>7</sup>
+                    El Tarjetahabiente podrá adelantar un vuelo en el mismo origen y destino, sin pagar diferencia de tarifa.<br>
+                  <sup>8</sup>
+                    Para el Tarjetahabiente que facture por lo menos $15,000 pesos, durante los primeros 03 meses a partir de la emisión de la Tarjeta Viva; se otorgará un bono de 15,000 Viva Puntos que se abonará en Viva Recompensas. Aplican Términos y Condiciones del Programa de Lealtad Viva Recompensas.<br>
+                  <sup>9</sup>
+                    El Tarjetahabiente podrá llevar hasta 05 kilos extra de equipaje de mano, sin costo alguno, aplicable solo en las modalidades Viva Básico y Viva Light, sin que dicho equipaje exceda 15 kilos.<br><br>
+                  <div class="legales-text">
+                    <p>
+                      Tus datos están protegidos y serán tratados de conformidad con nuestro
+                        <a target="_blank" href="http://www.scotiabank.com.mx/es-mx/acerca-de-scotiabank/aviso-de-privacidad.aspx">
+                        Aviso de privacidad</a>.<br>
+                        Para mayor información sobre términos, condiciones, comisiones y requisitos de contratación de las Tarjetas de Crédito Scotiabank consulta
+                        <a target="_blank" href="http://www.scotiabank.com.mx/es-mx/personas/tarjetas-de-credito/consejos-y-herramientas/mas-informacion.aspx">scotiabank.com.mx</a><br>
+                        Consulta el <a target="_blank" href="http://cdn.agilitycms.com/scotia-bank-mexico/spanish/pdf/personas/creditos/CONTRATOtc.pdf">Contrato de Tarjetas de Crédito Scotiabank y RECA</a>.<br>
+                        ¿Qué y cuánto es el <a target="_blank" href="http://www.scotiabank.com.mx/Personas/Tarjetas-de-Credito/Consejos-y-Herramientas/costo-anual-total-cat.aspx">Costo Anual Total</a> (CAT)?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div id="TiempoProcesamientoSolicitud" style="visibility:hidden;">
+            0;
+        </div>
+      </div>
+    </div> 
+
+    <!--Footer-->
+    <div class="row">
+        <div class="”clearfix”"></div>  
+        <footer class="bg-gray">
+          <div class="container">
+            <div class="row min-p">
+              <div class="col-sm-5 col-sm-push-7">
+                <p class="text-center t-right">
+                  <a class="blue-hover" target="_blank" href="http://www.scotiabank.com.mx/es-mx/acerca-de-scotiabank/aviso-de-privacidad.aspx">Aviso de privacidad</a>
+                  |<a class="blue-hover" target="_blank" href="http://www.scotiabank.com.mx/es-mx/acerca-de-scotiabank/aviso-de-privacidad.aspx">Seguridad</a>
+                  |<a href="http://www.scotiabank.com.mx/es-mx/acerca-de-scotiabank/seguridad/trusteer-rapport.aspx" target="_blank">
+                  <img src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/img/trusteer-logo.png">
+                  </a>
+                </p>
+                </div>
+              <div class="col-sm-7 col-sm-pull-5">
+                <p class="text-center t-left">
+                  ©2017 Scotiabank. Todos los derechos reservados
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+    <!--End Footer-->
+  </div>         
+</body>
+  <!-- Application Scripts -->
+  <script src="app.js" charset="utf-8" type="text/javascript"></script>
+  <script src="scripts/MainController.js" charset="utf-8" type="text/javascript"></script>
+  <script src="scripts/province.js" charset="utf-8" type="text/javascript"></script>
+  <script src="js/CreateOperationController.js" charset="utf-8" type="text/javascript"></script>
+  <!-- <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PVK7LR');
+  </script> -->
+  <!--libs-->
+  <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/jquery.min.js"></script>
+  <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/bootstrap.min.js"></script>
+  <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/material.min.js"></script>
+  <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/ripples.min.js"></script>
+  <!--Custom js-->
+  <!-- <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/uat/js/cdn_originacion.js"></script> -->
+  <script>$.material.init();</script>
+  <!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?client=gme-scotiabankinverlat&channel=solicitud_viva&libraries=visualization,places,geometry,drawing&language=es" charset="utf-8"></script> -->
+  <script type="text/javascript">
+        // var tipoProductoTimeoutRedirect = "viva";
+        // var reintentos = "";
+        // var validacionBack = "";
+        // var flagModal = true;
+        // var reintento = 'False';
+        // var numeroIntento = 0;
+        // var serviceCPTuSucursal = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarSucursal";
+        // var serviceObtenerNombres2 = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
+        // var serviceObtenerNombres = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
+        // var serviceAJAXDomicilio = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarCodigoPostalDatosBasicos";
+        // var serviceAJAXEmpresa = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarCodigoPostalEmpresa";
+        // var tiempoRedireccionCdn = 0;
+
+        // function activateTimeout(producto) {
+        //     setTimeout(function () {
+        //         var productPath = "Timeout?tipoProducto=" + producto;
+        //         var redirectBase = window.location.pathname.split('/');
+
+        //         var indicator = redirectBase[redirectBase.length - 1];
+
+        //         if (indicator.toLowerCase() === "captura") {
+        //             redirectBase.pop();
+        //             redirectBase.pop();
+        //         } else if (indicator.toLowerCase() === "viva" || indicator.toLowerCase() === "linio") {
+        //             redirectBase.pop();
+        //             redirectBase.pop();
+        //         } else {
+        //             redirectBase.pop();
+        //             redirectBase.pop();
+        //             redirectBase.pop();
+        //         }
+        //         window.location.href = window.location.origin + redirectBase.join('/') + '/' + productPath;
+        //     }, tiempoRedireccionCdn); // 5 min = 300000.
+        // }
+
+        // function PaddingSuc(len, pad) {
+        //     if (len === undefined) {
+        //         len = 1;
+        //     } else if (pad === undefined) {
+        //         pad = '0';
+        //     }
+
+        //     var pads = '';
+        //     while (pads.length < len) {
+        //         pads += pad;
+        //     }
+
+        //     this.pad = function (what) {
+        //         var s = what.toString();
+        //         return pads.substring(0, pads.length - s.length) + s;
+        //     };
+        // }
+
+        // function handlerPicked(cve, detalles) {
+        //     var padding = new PaddingSuc(6);
+        //     var formateado = padding.pad(cve);
+        //     console.log("Sucursal raw:", cve, "Sucursal padding:", formateado);
+        //     asignaSuc(formateado);
+        //     var r = detalles.join('|');
+        //     $("#SucursalDetalles").val(r);
+        // }
+
+        // function asignaSuc(valor) {
+        //     $('#SucursalEntregaId').val(valor);
+        // };
+  </script>
+</html>
