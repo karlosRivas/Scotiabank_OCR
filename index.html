@@ -24,15 +24,6 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/solicitudOnLine/Content/TarjetaCredito/images/scotiabank-icono-114x114.png">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- Google Tag Manager -->
-    <!--     <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-PVK7LR');
-    </script> -->
-    <!-- End Google Tag Manager -->
     <!-- Bootstrap v.3.3.6-->
     <link rel="stylesheet" href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/css/bootstrap.min.css" />
     <!-- Material Design fonts -->
@@ -48,18 +39,11 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    
-   <!--  <script src="js/api-check.js"></script> -->
+
+
     <!-- This is the latest version of angular (at the time this template was created) -->
     <script src="js/angular.js"></script>
-    <!-- This is the current state of master for formly core. -->
-    <!-- <script src="js/formly.js"></script> -->
-    <!-- This is the current state of master for the bootstrap templates -->
-    <!-- <script src="js/angular-formly-templates-bootstrap.js"></script> -->
-   <!--  <script type="text/javascript" src="js/sha256.js"></script> -->
-    <!-- <script type="text/javascript" src="js/enc-base64-min.js"></script>  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style type="text/css" media="screen">
         .fileContainer {
@@ -97,7 +81,7 @@
         }
 
     </style>
-        
+
 </head>
 <body ng-app ng-controller="CreateOperationController">
   <header>
@@ -127,7 +111,7 @@
        <div class="divider hidden-xs"></div>
       </div>
       <div class="wrap-titulo">
-       <h1>         
+       <h1>
         <span> Tarjeta Viva </span>
         <span class="pull-right sitioSeguro">
          <i class="dfmxs dfmxs-canvas-lock scotiabank-red" aria-hidden="true"></i> Sitio seguro
@@ -137,15 +121,15 @@
      </div>
   </header>
 
-  <div class="content">     
+  <div class="content">
     <div class="col-xs-12 legales-text">
       <label class="fileContainer">
         <i class="fa fa-camera"></i> Cargar Imagen
         <input  class="btn btn-raised" id="btn-confirmar" type="file" onchange="angular.element(this).scope().uploadedFile(this)"/>
-      </label>         
+      </label>
     </div>
     <canvas id="the-canvas"  style="/*width:120px;*/ height: 3rem;"></canvas>
-  
+
     <div class="row">
       <div class="col-sm-4 wrap-card col-mobile">
        <div class="fondo-tarjeta white viva">
@@ -214,7 +198,7 @@
        </div>
       </div>
       <div class="col-sm-8 wrap-form col-mobile">
-          
+
         <form  id="idform"  name="idform">
             <input data-val="true" data-val-number="El campo TipoProductoTC debe ser un número." data-val-required="The TipoProductoTC field is required." id="SeccionDatosBasicos_TipoProductoTC" name="SeccionDatosBasicos.TipoProductoTC" type="hidden" value="0"><input data-val="true" data-val-required="The TipoProductoVM field is required." id="TipoProductoVM" name="TipoProductoVM" type="hidden" value="Viva">    <!--Valores dinamicos-->
             <input id="Direccion_EstadoBuroCreditoId" name="SeccionDatosBasicos.Direccion.EstadoBuroCreditoId" type="hidden" value=""><input data-val="true" data-val-length="The field Estado ID * must be a string with a minimum length of 2 and a maximum length of 3." data-val-length-max="3" data-val-length-min="2" id="Direccion_EstadoProspectosId" name="SeccionDatosBasicos.Direccion.EstadoProspectosId" type="hidden" value="">
@@ -647,7 +631,7 @@
                         <div class="col-xs-12 col-sm-6">
                           <div class="estados">
                             <div class="form-group label-floating inner-addon-right is-empty">
-                              <label for="Direccion_Estado" class="control-label">Estado</label><!-- 
+                              <label for="Direccion_Estado" class="control-label">Estado</label><!--
                               <input class="form-control" data-val="true" data-val-required="Estado es Requerido" id="SeccionDatosBasicos_Direccion_Estado" name="SeccionDatosBasicos.Direccion.Estado" tabindex="@(++tabindex)" type="hidden" value="" readonly="readonly"> -->
                               <input class="form-control" id="EstadoDomicilio" name="EstadoDomicilio" tabindex="@(++tabindex)" type="text" value="" ng-model="user.estado">
                               <!-- <input type="hidden" name="Direccion_Estado"> -->
@@ -709,8 +693,8 @@
                     </p>
                   </div>
                 </div>
-                
-                <!-- Acepto terminos-->  
+
+                <!-- Acepto terminos-->
                 <div class="col-xs-12 bg-gray text-gray-creditos">
                   <div class="disclaimer">
                     <div>
@@ -764,7 +748,7 @@
               </div>
             </div>
             <div class="clearfix"></div>
-            
+
             <!-- Modal (Loader) -->
             <div class="modal fade backSplash" id="loader" role="dialog" style="display: none;">
                 <div class="modal-dialog">
@@ -833,7 +817,7 @@
                         </div>
                     </div>
             </div>
-            
+
             <!--Modal confirmación de información-->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
               <div class="modal-dialog" role="document">
@@ -851,7 +835,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--Modal confirmación de información-->
             <div class="modal fade" id="myModalError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false">
               <div class="modal-dialog" role="document">
@@ -1035,7 +1019,7 @@
               </div>
             </div>
             <div class="clearfix"></div>
-        </form>    
+        </form>
 
         <!--Modal legales-->
         <div class="modal fade" id="modalLegalesDF" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false">
@@ -1083,11 +1067,11 @@
             0;
         </div>
       </div>
-    </div> 
+    </div>
 
     <!--Footer-->
     <div class="row">
-        <div class="”clearfix”"></div>  
+        <div class="”clearfix”"></div>
         <footer class="bg-gray">
           <div class="container">
             <div class="row min-p">
@@ -1110,7 +1094,7 @@
         </footer>
     </div>
     <!--End Footer-->
-  </div>         
+  </div>
 </body>
   <!-- Application Scripts -->
   <!-- <script src="app.js" charset="utf-8" type="text/javascript"></script> -->
