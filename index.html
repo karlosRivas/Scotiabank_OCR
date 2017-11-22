@@ -122,13 +122,22 @@
   </header>
 
   <div class="content">
-    <div class="col-xs-12 legales-text">
-      <label class="fileContainer">
-        <i class="fa fa-camera"></i> Cargar Imagen
-        <input  class="btn btn-raised" id="btn-confirmar" type="file" onchange="angular.element(this).scope().uploadedFile(this)"/>
-      </label>
-    </div>
-    <canvas id="the-canvas"  style="/*width:120px;*/ height: 3rem;"></canvas>
+  	<div class="row">
+	    <div class="col-xs-6 legales-text">
+	      <label class="fileContainer">
+	        <i class="fa fa-camera"></i> Cargar INE
+	        <input  class="btn btn-raised" id="file-id" type="file" onchange="angular.element(this).scope().uploadedFile(this)"/>
+	      </label>
+	    </div>
+
+	    <div class="col-xs-6 legales-text">
+	      <label class="fileContainer">
+	        <i class="fa fa-camera"></i> Cargar Comprobante
+	        <input  class="btn btn-raised" id="file-comprobante" type="file" onchange="angular.element(this).scope().uploadedComprobante(this)"/>
+	      </label>
+	    </div>
+	    <canvas id="the-canvas"  style="/*width:120px;*/ height: 3rem;"></canvas>
+  	</div>
 
     <div class="row">
       <div class="col-sm-4 wrap-card col-mobile">
@@ -244,9 +253,9 @@
                       <div class="row">
                         <div class="col-xs-12 col-sm-6">
                           <div class="form-group inner-addon-right is-empty" id="classNombres">
-                            <label class="control-label" for="SeccionDatosBasicos_PrimerNombre" id="lblPrimerNombre">PrimerNombre
+                            <label class="control-label" for="SeccionDatosBasicos_PrimerNombre" id="lblPrimerNombre">Primer Nombre
                             </label>
-                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_PrimerNombre" name="ReferenciaPersonalMV.PrimerNombre" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerNom">
+                            <input autocomplete="off" class="form-control" data-val="true" data-val-length="La longitud máxima en Primer Nombre es de 26 caracteres y la minima de 3." data-val-length-max="26" data-val-length-min="3" data-val-regex="Carácter Inválido en Primer Nombre" data-val-regex-pattern="([A-Z ]+)" data-val-required="Primer Nombre es Requerido" id="ReferenciaPersonalMV_PrimerNombre" name="ReferenciaPersonalMV.PrimerNombre" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerNom">
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
@@ -262,7 +271,7 @@
                         <div class="col-xs-12 col-sm-6">
                           <div class="form-group inner-addon-right is-empty">
                             <label class="control-label" for="SeccionDatosBasicos_ApellidoPaterno" id="lblApellidoPaterno">Primer Apellido</label>
-                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_ApellidoPaterno" name="ReferenciaPersonalMV.ApellidoPaterno" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerApe">
+                            <input autocomplete="off" class="form-control" required id="ReferenciaPersonalMV_ApellidoPaterno" name="ReferenciaPersonalMV.ApellidoPaterno" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerApe">
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
@@ -1113,6 +1122,8 @@
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/bootstrap.min.js"></script>
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/material.min.js"></script>
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/ripples.min.js"></script>
+  <script type="text/javascript" src="../js/commons/sha256.js"></script>
+  <script type="text/javascript" src="../js/commons/enc-base64-min.js"></script>
   <!--Custom js-->
   <!-- <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/uat/js/cdn_originacion.js"></script> -->
   <script>$.material.init();</script>
