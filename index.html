@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="telefonicaMexico">
+<html ng-app="scotiabank" lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,10 +36,7 @@
     <link rel="stylesheet" href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/uat/css/generic-style.css" />
 
 
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
     <!-- This is the latest version of angular (at the time this template was created) -->
     <script src="js/angular.js"></script>
@@ -79,11 +76,34 @@
             top: 0;
             cursor: pointer;
         }
+         .form-control:focus {
+          -webkit-box-shadow: 0 4px 2px -2px #dd271d;
+          box-shadow: 0 4px 2px -2px #dd271d;
+          box-shadow: 0 4px 2px -2px #dd271d;
+        }
+
+        .chat-msg p {
+          line-height: 1.7em;
+        }
 
     </style>
 
+    <!--librerias Chat-->
+    <script src="js/jquery/jquery-1.12.0.min.js"></script>
+    <script src="js/angular-idle.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/chat/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/chat/themes.css"/>
+    <link rel="stylesheet" type="text/css" href="css/chat/custom-template.css"/>
+
+    <script src="js/api-check.js"></script>
+    <script src="js/formly.js"></script>
+    <!-- This is the current state of master for the bootstrap templates -->
+    <script src="js/angular-formly-templates-bootstrap.js"></script>
+    <!--END librerias Chat-->  
+
 </head>
-<body ng-app ng-controller="CreateOperationController">
+<body ng-controller="CreateOperationController">
   <header>
      <div>
       <div class="col-xs-10 col-sm-9 col-md-9  col-lg-9">
@@ -255,7 +275,8 @@
                           <div class="form-group inner-addon-right is-empty" id="classNombres">
                             <label class="control-label" for="SeccionDatosBasicos_PrimerNombre" id="lblPrimerNombre">Primer Nombre
                             </label>
-                            <input autocomplete="off" class="form-control" data-val="true" data-val-length="La longitud máxima en Primer Nombre es de 26 caracteres y la minima de 3." data-val-length-max="26" data-val-length-min="3" data-val-regex="Carácter Inválido en Primer Nombre" data-val-regex-pattern="([A-Z ]+)" data-val-required="Primer Nombre es Requerido" id="ReferenciaPersonalMV_PrimerNombre" name="ReferenciaPersonalMV.PrimerNombre" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerNom">
+                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_PrimerNombre" name="ReferenciaPersonalMV.PrimerNombre" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerNom"> 
+                           
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
@@ -266,6 +287,7 @@
                         </div>
                       </div>
 
+                      
                       <!-- Primer y Segundo Apellido-->
                       <div class="row">
                         <div class="col-xs-12 col-sm-6">
@@ -754,6 +776,7 @@
                 <button class="btn-siguiente btn btn-raised" id="btn-confirmar" type="button" ng-click="creatOperation(user)">
                   <i class="dfmxs dfmxs-canvas-lock"></i> Enviar solicitud
                 </button>
+
               </div>
             </div>
             <div class="clearfix"></div>
@@ -1104,11 +1127,41 @@
     </div>
     <!--End Footer-->
   </div>
+
+  <!-- chat -->
+  <div ng-controller="Shell as vm">
+    <div id="chat-container-master" class="chat-container" style="display:none; ">
+      <div class="chat-container" ng-controller="Shell as vm">
+        <irontec-simple-chat
+          messages="vm.messages"
+          username="vm.username"
+          input-placeholder-text="Escribe aquí tu mensaje"
+          submit-button-text="Enviar"
+          title="Asistente Scotiabank"
+          theme="material"
+          submit-function="vm.sendMessage"
+          visible="true">
+        </irontec-simple-chat>
+      </div>
+    </div>
+  </div>
+  <!-- end chat -->
+
+
 </body>
+  
+
+  <!-- Application Dependencies Chat-->
+  <script src="js/chat/lodash.js" charset="utf-8"></script>
+  <script src="js/chat/index.js" charset="utf-8"></script>
+  <script src="js/chat/chatTemplate.js" charset="utf-8"></script>
+
   <!-- Application Scripts -->
-  <!-- <script src="app.js" charset="utf-8" type="text/javascript"></script> -->
-  <!-- <script src="scripts/MainController.js" charset="utf-8" type="text/javascript"></script> -->
-  <!-- <script src="scripts/province.js" charset="utf-8" type="text/javascript"></script> -->
+  <script src="app.js"></script>
+  <script src="js/formly.js"></script>
+  <script src="js/api-check.js"></script>
+
+  <script src="js/CreateOperationController.js" charset="utf-8" type="text/javascript"></script>
   <script src="js/CreateOperationController.js" charset="utf-8" type="text/javascript"></script>
   <!-- <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -1122,8 +1175,8 @@
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/bootstrap.min.js"></script>
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/material.min.js"></script>
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/ripples.min.js"></script>
-  <script type="text/javascript" src="../js/commons/sha256.js"></script>
-  <script type="text/javascript" src="../js/commons/enc-base64-min.js"></script>
+  <script type="text/javascript" src="js/commons/sha256.js"></script>
+  <script type="text/javascript" src="js/commons/enc-base64-min.js"></script>
   <!--Custom js-->
   <!-- <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/uat/js/cdn_originacion.js"></script> -->
   <script>$.material.init();</script>
@@ -1136,11 +1189,11 @@
         // var reintento = 'False';
         // var numeroIntento = 0;
         // var serviceCPTuSucursal = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarSucursal";
-        // var serviceObtenerNombres2 = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
-        // var serviceObtenerNombres = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
+        //var serviceObtenerNombres2 = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
+        //var serviceObtenerNombres = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
         // var serviceAJAXDomicilio = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarCodigoPostalDatosBasicos";
         // var serviceAJAXEmpresa = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarCodigoPostalEmpresa";
-        // var tiempoRedireccionCdn = 0;
+        //var tiempoRedireccionCdn = 0;
 
         // function activateTimeout(producto) {
         //     setTimeout(function () {
@@ -1194,5 +1247,7 @@
         // function asignaSuc(valor) {
         //     $('#SucursalEntregaId').val(valor);
         // };
+
   </script>
+
 </html>
