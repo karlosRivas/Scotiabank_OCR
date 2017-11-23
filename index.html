@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="telefonicaMexico">
+<html ng-app="scotiabank" lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,10 +36,7 @@
     <link rel="stylesheet" href="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/uat/css/generic-style.css" />
 
 
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
     <!-- This is the latest version of angular (at the time this template was created) -->
     <script src="js/angular.js"></script>
@@ -79,11 +76,40 @@
             top: 0;
             cursor: pointer;
         }
+         .form-control:focus {
+          -webkit-box-shadow: 0 4px 2px -2px #dd271d;
+          box-shadow: 0 4px 2px -2px #dd271d;
+          box-shadow: 0 4px 2px -2px #dd271d;
+        }
+
+        .chat-msg p {
+          line-height: 1.7em;
+        }
+
+
+        .msg{
+          color:#dd271d;
+          font-size: 15px;
+        }
 
     </style>
 
+    <!--librerias Chat-->
+    <script src="js/jquery/jquery-1.12.0.min.js"></script>
+    <script src="js/angular-idle.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/chat/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/chat/themes.css"/>
+    <link rel="stylesheet" type="text/css" href="css/chat/custom-template.css"/>
+
+    <script src="js/api-check.js"></script>
+    <script src="js/formly.js"></script>
+    <!-- This is the current state of master for the bootstrap templates -->
+    <script src="js/angular-formly-templates-bootstrap.js"></script>
+    <!--END librerias Chat-->  
+
 </head>
-<body ng-app ng-controller="CreateOperationController">
+<body ng-controller="CreateOperationController">
   <header>
      <div>
       <div class="col-xs-10 col-sm-9 col-md-9  col-lg-9">
@@ -208,7 +234,7 @@
       </div>
       <div class="col-sm-8 wrap-form col-mobile">
 
-        <form  id="idform"  name="idform">
+        <form  id="idform"  name="idform" >
             <input data-val="true" data-val-number="El campo TipoProductoTC debe ser un número." data-val-required="The TipoProductoTC field is required." id="SeccionDatosBasicos_TipoProductoTC" name="SeccionDatosBasicos.TipoProductoTC" type="hidden" value="0"><input data-val="true" data-val-required="The TipoProductoVM field is required." id="TipoProductoVM" name="TipoProductoVM" type="hidden" value="Viva">    <!--Valores dinamicos-->
             <input id="Direccion_EstadoBuroCreditoId" name="SeccionDatosBasicos.Direccion.EstadoBuroCreditoId" type="hidden" value=""><input data-val="true" data-val-length="The field Estado ID * must be a string with a minimum length of 2 and a maximum length of 3." data-val-length-max="3" data-val-length-min="2" id="Direccion_EstadoProspectosId" name="SeccionDatosBasicos.Direccion.EstadoProspectosId" type="hidden" value="">
             <input data-val="true" data-val-length="The field Estado ID * must be a string with a minimum length of 2 and a maximum length of 3." data-val-length-max="3" data-val-length-min="2" id="DireccionEmpresa_EstadoProspectosId" name="SeccionDatosAdicionales.ConociendoteMas.DireccionEmpresa.EstadoProspectosId" type="hidden" value=""><input id="DireccionEmpresa_EstadoBuroCreditoId" name="SeccionDatosAdicionales.ConociendoteMas.DireccionEmpresa.EstadoBuroCreditoId" type="hidden" value=""><input data-val="true" data-val-number="El campo Nacionalidad debe ser un número." data-val-required="The Nacionalidad field is required." id="NacionalidadId" name="SeccionDatosBasicos.NacionalidadId" type="hidden" value="1"><input data-val="true" data-val-required="Debes seleccionar una opción de como quieres que aparezca tú nombre en la tarjeta" id="NombreTarjeta" name="SeccionDatosAdicionales.YaCasiTerminamos.NombreTarjeta" type="hidden" value=""><input data-val="true" data-val-required="Debes seleccionar una sucursal de entrega" id="SucursalEntregaId" name="SeccionDatosAdicionales.YaCasiTerminamos.SucursalEntregaId" type="hidden" value=""><input id="SucursalDetalles" name="SucursalDetalles" type="hidden" value=""><input value="1" data-val="true" data-val-number="El campo Ingresos Mensuales Comprobables debe ser un número." data-val-range="Los Ingresos Mensuales Comprobables deben ser mayores a 0 y menores o iguales a 999999999" data-val-range-max="999999999" data-val-range-min="1" data-val-required="Ingresos Mensuales Comprobables es Requerido" id="SeccionDatosAdicionales_ConociendoteMas_IngresosMensuales" name="SeccionDatosAdicionales.ConociendoteMas.IngresosMensuales" type="hidden">    <!--Valores default-->
@@ -232,7 +258,7 @@
                 <div class="panel panel-default">
                   <div class="panel-heading actives" role="tab" id="headingDatospersonales">
                     <h4 class="panel-title titulo">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="btnCollapseOne">
+                    <a id="datosPersonales" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="btnCollapseOne">
                       <i class="dfmxs dfmxs-canvas-user" aria-hidden="true" id="iconoUsuario"></i> Datos personales
                       <i class="indicator dfmxs dfmxs-canvas-arrow-up pull-right"></i>
                     </a>
@@ -255,7 +281,9 @@
                           <div class="form-group inner-addon-right is-empty" id="classNombres">
                             <label class="control-label" for="SeccionDatosBasicos_PrimerNombre" id="lblPrimerNombre">Primer Nombre
                             </label>
-                            <input autocomplete="off" class="form-control" data-val="true" data-val-length="La longitud máxima en Primer Nombre es de 26 caracteres y la minima de 3." data-val-length-max="26" data-val-length-min="3" data-val-regex="Carácter Inválido en Primer Nombre" data-val-regex-pattern="([A-Z ]+)" data-val-required="Primer Nombre es Requerido" id="ReferenciaPersonalMV_PrimerNombre" name="ReferenciaPersonalMV.PrimerNombre" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerNom">
+                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_PrimerNombre" name="ReferenciaPersonalMV.PrimerNombre" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerNom">
+                            <p id="msgNombre" class="msg"></p> 
+                           
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
@@ -266,12 +294,14 @@
                         </div>
                       </div>
 
+                      
                       <!-- Primer y Segundo Apellido-->
                       <div class="row">
                         <div class="col-xs-12 col-sm-6">
                           <div class="form-group inner-addon-right is-empty">
                             <label class="control-label" for="SeccionDatosBasicos_ApellidoPaterno" id="lblApellidoPaterno">Primer Apellido</label>
-                            <input autocomplete="off" class="form-control" required id="ReferenciaPersonalMV_ApellidoPaterno" name="ReferenciaPersonalMV.ApellidoPaterno" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerApe">
+                            <input autocomplete="off" class="form-control" id="ReferenciaPersonalMV_ApellidoPaterno" name="ReferenciaPersonalMV.ApellidoPaterno" tabindex="@(++tabindex)" type="text" value="" ng-model="user.primerApe">
+                            <p id="msgApellido" class="msg"></p> 
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
@@ -294,6 +324,7 @@
                           <div class="form-group inner-addon-right is-empty">
                             <label for="Rfc" class="control-label">RFC</label>
                             <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_Rfc" name="SeccionDatosBasicos.Rfc" tabindex="@(++tabindex)" type="text" value="" ng-model="user.rfc">
+                            <p id="msgRFC" class="msg"></p> 
                           </div>
                         </div>
                       </div>
@@ -522,6 +553,7 @@
                             <div class="form-group inner-addon-right is-empty">
                               <label class="control-label" for="SeccionDatosBasicos_NumeroCelular" id="lblNumeroCelular">Teléfono Celular</label>
                                 <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_NumeroCelular" name="SeccionDatosBasicos.NumeroCelular" tabindex="@(++tabindex)" title="Últimos 10 dígitos con clave LADA" type="tel" value="" ng-model="user.celular">
+                                <p id="msgCelular" class="msg"></p> 
                             </div>
                           </div>
                         </div>
@@ -532,7 +564,8 @@
                         <div class="col-xs-12 col-sm-6">
                           <div class="form-group inner-addon-right is-empty">
                             <label class="control-label" for="SeccionDatosBasicos_CorreoElectronico" id="lblCorreoElectronico">Correo Electrónico</label>
-                              <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_CorreoElectronico" name="SeccionDatosBasicos.CorreoElectronico" tabindex="@(++tabindex)" type="email" value="" ng-model="user.correo">
+                              <input autocomplete="off" class="form-control" id="SeccionDatosBasicos_CorreoElectronico" name="SeccionDatosBasicos_CorreoElectronico" tabindex="@(++tabindex)" type="email" value="" ng-model="user.correo">
+                              <p id="msgCorreo" class="msg"></p> 
                           </div>
                         </div>
 
@@ -546,7 +579,7 @@
 
                       <div class="row">
                         <div class="col-xs-12 col-sm 12 text-center" id="flecha-Datospersonales">
-                          <a class="arrow-double-down" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                          <a id="siguiente" class="arrow-double-down" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
                             <i class="dfmxs dfmxs-canvas-next text-center icon-3x double-d" aria-hidden="true"></i>
                             <span>Siguiente</span>
                           </a>
@@ -754,6 +787,7 @@
                 <button class="btn-siguiente btn btn-raised" id="btn-confirmar" type="button" ng-click="creatOperation(user)">
                   <i class="dfmxs dfmxs-canvas-lock"></i> Enviar solicitud
                 </button>
+
               </div>
             </div>
             <div class="clearfix"></div>
@@ -1104,12 +1138,42 @@
     </div>
     <!--End Footer-->
   </div>
+
+  <!-- chat -->
+  <div ng-controller="Shell as vm">
+    <div id="chat-container-master" class="chat-container" style="display:none; ">
+      <div class="chat-container" ng-controller="Shell as vm">
+        <irontec-simple-chat
+          messages="vm.messages"
+          username="vm.username"
+          input-placeholder-text="Escribe aquí tu mensaje"
+          submit-button-text="Enviar"
+          title="Asistente Scotiabank"
+          theme="material"
+          submit-function="vm.sendMessage"
+          visible="true">
+        </irontec-simple-chat>
+      </div>
+    </div>
+  </div>
+  <!-- end chat -->
+
+
 </body>
+  
+
+  <!-- Application Dependencies Chat-->
+  <script src="js/chat/lodash.js" charset="utf-8"></script>
+  <script src="js/chat/index.js" charset="utf-8"></script>
+  <script src="js/chat/chatTemplate.js" charset="utf-8"></script>
+
   <!-- Application Scripts -->
-  <!-- <script src="app.js" charset="utf-8" type="text/javascript"></script> -->
-  <!-- <script src="scripts/MainController.js" charset="utf-8" type="text/javascript"></script> -->
-  <!-- <script src="scripts/province.js" charset="utf-8" type="text/javascript"></script> -->
+  <script src="app.js"></script>
+  <script src="js/formly.js"></script>
+  <script src="js/api-check.js"></script>
+
   <script src="js/CreateOperationController.js" charset="utf-8" type="text/javascript"></script>
+  <script src="js/validacion-formulario.js" charset="utf-8" type="text/javascript"></script>
   <!-- <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1122,8 +1186,8 @@
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/bootstrap.min.js"></script>
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/material.min.js"></script>
   <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/js/ripples.min.js"></script>
-  <script type="text/javascript" src="../js/commons/sha256.js"></script>
-  <script type="text/javascript" src="../js/commons/enc-base64-min.js"></script>
+  <script type="text/javascript" src="js/commons/sha256.js"></script>
+  <script type="text/javascript" src="js/commons/enc-base64-min.js"></script>
   <!--Custom js-->
   <!-- <script src="https://cdn.agilitycms.com/scotia-bank-mexico/digital-factory/originacion/uat/js/cdn_originacion.js"></script> -->
   <script>$.material.init();</script>
@@ -1136,11 +1200,11 @@
         // var reintento = 'False';
         // var numeroIntento = 0;
         // var serviceCPTuSucursal = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarSucursal";
-        // var serviceObtenerNombres2 = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
-        // var serviceObtenerNombres = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
+        //var serviceObtenerNombres2 = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
+        //var serviceObtenerNombres = "/solicitudOnLine/TarjetaCredito/UnicPage/ObtenerNombresTarjeta";
         // var serviceAJAXDomicilio = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarCodigoPostalDatosBasicos";
         // var serviceAJAXEmpresa = "/solicitudOnLine/TarjetaCredito/UnicPage/BuscarCodigoPostalEmpresa";
-        // var tiempoRedireccionCdn = 0;
+        //var tiempoRedireccionCdn = 0;
 
         // function activateTimeout(producto) {
         //     setTimeout(function () {
@@ -1194,5 +1258,7 @@
         // function asignaSuc(valor) {
         //     $('#SucursalEntregaId').val(valor);
         // };
+
   </script>
+
 </html>
